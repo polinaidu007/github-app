@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
 import { ToastContainer } from "react-toastify"
 import "react-toastify/dist/ReactToastify.min.css"
-import firebase from "firebase/app"
+import firebase from "firebase/compat/app"
 import "firebase/auth"
 import Home from "./pages/Home"
 import Signin from "./pages/Signin"
@@ -14,8 +14,9 @@ import PageNotFound from './pages/PageNotFound';
 import { UserContext } from './context/UserContext';
 import Footer from './layout/Footer';
 import Header from './layout/Header';
+import firebaseConfig from './Config/firebaseConfig';
 
-
+firebase.initializeApp(firebaseConfig)
 
 function App() {
   const [user, setUser] = useState(null)

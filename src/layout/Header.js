@@ -26,10 +26,10 @@ function Header() {
                         context.user ? (<NavItem>
                             <NavLink tag={Link} to="/" className="text-white">Logout</NavLink>
                         </NavItem>) : (<><NavItem>
-                            <NavLink tag={Link} to="/" className="text-white">Signup</NavLink>
+                            <NavLink tag={Link} to="/signup" className="text-white">Signup</NavLink>
                         </NavItem>
                             <NavItem>
-                                <NavLink tag={Link} to="/" className="text-white">Signin</NavLink>
+                                <NavLink tag={Link} to="/signin" className="text-white">Signin</NavLink>
                             </NavItem></>)
                     }
 
