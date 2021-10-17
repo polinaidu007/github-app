@@ -15,3 +15,4 @@ const UserCard = ({ user }) => {
         </Card>
     )
 }
+export default UserCard
