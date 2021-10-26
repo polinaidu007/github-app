@@ -19,12 +19,12 @@ import { UserContext } from "../context/UserContext"
 import { Redirect } from "react-router-dom"
 import { toast } from "react-toastify"
 
-function Signup() {
+function SignIn() {
     const context = useContext(UserContext)
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
-    const handleSignup = () => {
+    const handleSignIn = () => {
         firebase
             .auth()
             .signInWithEmailAndPassword(email, password)
@@ -39,7 +39,7 @@ function Signup() {
     }
     const handleFormSubmit = e => {
         e.preventDefault()
-        handleSignup()
+        handleSignIn()
     }
     if (context.user?.uid) {
         return (<Redirect to="/" />)
@@ -96,4 +96,4 @@ function Signup() {
     );
 }
 
-export default Signup;
+export default SignIn;
